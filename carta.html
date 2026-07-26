@@ -1,0 +1,1709 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Para mi bb consentido ❤️</title>
+
+
+<style>
+
+/* =====================================================
+   CONFIGURACIÓN GENERAL
+===================================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+
+    min-height: 100vh;
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    color: white;
+
+    background:
+
+        radial-gradient(
+            circle at 50% 20%,
+            #8a2323 0%,
+            transparent 35%
+        ),
+
+        radial-gradient(
+            circle at 10% 90%,
+            #480b0b 0%,
+            transparent 30%
+        ),
+
+        linear-gradient(
+            135deg,
+            #090101,
+            #210607,
+            #0a0202
+        );
+
+    overflow-x: hidden;
+
+}
+
+
+/* =====================================================
+   ESTRELLAS
+===================================================== */
+
+.estrella {
+
+    position: fixed;
+
+    width: 3px;
+    height: 3px;
+
+    background: #ffffff;
+
+    border-radius: 50%;
+
+    box-shadow:
+        0 0 8px #b8ddff,
+        0 0 15px #ffffff;
+
+    animation:
+        parpadear
+        3s
+        infinite
+        ease-in-out;
+
+    z-index: 0;
+
+}
+
+@keyframes parpadear {
+
+    0%,
+    100% {
+
+        opacity: 0.2;
+
+        transform:
+            scale(0.7);
+
+    }
+
+    50% {
+
+        opacity: 1;
+
+        transform:
+            scale(1.5);
+
+    }
+
+}
+
+
+/* =====================================================
+   PANTALLA DE INICIO
+===================================================== */
+
+#inicio {
+
+    position: fixed;
+
+    inset: 0;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    text-align: center;
+
+    padding: 25px;
+
+    background:
+
+        radial-gradient(
+            circle at center,
+            #501010,
+            #0c0202 70%
+        );
+
+    z-index: 100;
+
+    transition:
+
+        opacity 1s ease,
+
+        visibility 1s ease;
+
+}
+
+
+#inicio.ocultar {
+
+    opacity: 0;
+
+    visibility: hidden;
+
+}
+
+
+.inicio-contenido {
+
+    max-width: 600px;
+
+    animation:
+        aparecer
+        2s
+        ease;
+
+}
+
+
+@keyframes aparecer {
+
+    from {
+
+        opacity: 0;
+
+        transform:
+            translateY(30px);
+
+    }
+
+    to {
+
+        opacity: 1;
+
+        transform:
+            translateY(0);
+
+    }
+
+}
+
+
+.inicio-contenido h1 {
+
+    font-size:
+
+        clamp(
+            35px,
+            8vw,
+            65px
+        );
+
+    color: #e6f2ff;
+
+    text-shadow:
+
+        0 0 15px #a94747,
+
+        0 0 30px #7d1d1d;
+
+    margin-bottom: 20px;
+
+}
+
+
+.inicio-contenido h2 {
+
+    font-size:
+
+        clamp(
+            20px,
+            5vw,
+            30px
+        );
+
+    font-weight: normal;
+
+    color: #dfa9a9;
+
+    margin-bottom: 20px;
+
+}
+
+
+.inicio-contenido p {
+
+    color: #f2d7d7;
+
+    font-size: 18px;
+
+    line-height: 1.7;
+
+    margin-bottom: 35px;
+
+}
+
+
+.boton {
+
+    padding:
+
+        14px 35px;
+
+    border-radius: 30px;
+
+    border:
+
+        1px solid
+        #dfa6a6;
+
+    background:
+
+        linear-gradient(
+
+            135deg,
+
+            #65181c,
+
+            #210707
+
+        );
+
+    color: white;
+
+    font-family:
+
+        Georgia,
+        serif;
+
+    font-size: 17px;
+
+    cursor: pointer;
+
+    transition: 0.4s;
+
+    box-shadow:
+
+        0 0 15px
+        rgba(220, 100, 100, 0.25);
+
+}
+
+
+.boton:hover {
+
+    transform:
+        scale(1.08);
+
+    box-shadow:
+
+        0 0 30px
+        rgba(240, 130, 130, 0.6);
+
+}
+
+
+/* =====================================================
+   CONTENEDOR PRINCIPAL
+===================================================== */
+
+.contenedor {
+
+    min-height: 100vh;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    padding: 40px 20px;
+
+    position: relative;
+
+    z-index: 2;
+
+}
+
+
+/* =====================================================
+   CONTADOR
+===================================================== */
+
+.contador {
+
+    position: absolute;
+
+    top: 30px;
+
+    text-align: center;
+
+    width: 100%;
+
+    animation:
+
+        aparecer
+        1.5s
+        ease;
+
+}
+
+
+.contador h2 {
+
+    font-size: 22px;
+
+    font-weight: normal;
+
+    color: #efc7c7;
+
+}
+
+
+.contador span {
+
+    display: block;
+
+    font-size: 16px;
+
+    color: #b78282;
+
+    margin-top: 5px;
+
+}
+
+
+/* =====================================================
+   SOBRE
+===================================================== */
+
+.sobre-contenedor {
+
+    position: relative;
+
+    width:
+
+        min(
+            430px,
+            90vw
+        );
+
+    height: 300px;
+
+    cursor: pointer;
+
+    perspective: 1000px;
+
+    transition:
+
+        opacity
+        0.7s
+        ease,
+
+        transform
+        0.7s
+        ease;
+
+}
+
+
+.sobre-contenedor.oculto {
+
+    opacity: 0;
+
+    transform:
+        scale(0.5);
+
+    pointer-events: none;
+
+}
+
+
+.sobre {
+
+    position: absolute;
+
+    width: 100%;
+
+    height: 100%;
+
+    background:
+
+        linear-gradient(
+
+            145deg,
+
+            #501010,
+
+            #170506
+
+        );
+
+    border:
+
+        1px solid
+        #b87878;
+
+    border-radius: 10px;
+
+    box-shadow:
+
+        0 30px 70px
+        rgba(
+            0,
+            0,
+            0,
+            0.8
+        ),
+
+        0 0 30px
+        rgba(200, 70, 70, 0.25);
+
+    overflow: hidden;
+
+}
+
+
+/* =====================================================
+   PARTE FRONTAL DEL SOBRE
+===================================================== */
+
+.sobre::before {
+
+    content: "";
+
+    position: absolute;
+
+    bottom: 0;
+
+    left: 0;
+
+    width: 0;
+
+    height: 0;
+
+    border-left:
+
+        215px solid transparent;
+
+    border-right:
+
+        215px solid transparent;
+
+    border-bottom:
+
+        155px solid #2c0a0a;
+
+    z-index: 3;
+
+}
+
+
+/* =====================================================
+   PARTE LATERAL DEL SOBRE
+===================================================== */
+
+.sobre::after {
+
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+
+    bottom: 0;
+
+    width: 0;
+
+    height: 0;
+
+    border-top:
+
+        150px solid transparent;
+
+    border-bottom:
+
+        150px solid transparent;
+
+    border-left:
+
+        215px solid #4c1414;
+
+    z-index: 2;
+
+}
+
+
+/* =====================================================
+   SOLAPA
+===================================================== */
+
+.solapa {
+
+    position: absolute;
+
+    top: 0;
+
+    left: 0;
+
+    width: 100%;
+
+    height: 165px;
+
+    background:
+
+        linear-gradient(
+
+            135deg,
+
+            #7e2222,
+
+            #210707
+
+        );
+
+    clip-path:
+
+        polygon(
+
+            0 0,
+
+            100% 0,
+
+            50% 100%
+
+        );
+
+    transform-origin: top;
+
+    transition:
+
+        transform
+        1s
+        ease;
+
+    z-index: 5;
+
+}
+
+
+/* =====================================================
+   CORAZÓN DEL SOBRE
+===================================================== */
+
+.corazon {
+
+    position: absolute;
+
+    top: 100px;
+
+    left: 50%;
+
+    transform:
+
+        translateX(-50%);
+
+    font-size: 55px;
+
+    color: #ffdcdc;
+
+    text-shadow:
+
+        0 0 10px #ef9a9a,
+
+        0 0 30px #a93c3c;
+
+    z-index: 7;
+
+    transition: 0.5s;
+
+}
+
+
+/* =====================================================
+   TEXTO DEL SOBRE
+===================================================== */
+
+.mensaje-sobre {
+
+    position: absolute;
+
+    bottom: 28px;
+
+    width: 100%;
+
+    text-align: center;
+
+    z-index: 8;
+
+    color: #ebc5c5;
+
+    font-size: 18px;
+
+    letter-spacing: 2px;
+
+    transition: 0.5s;
+
+}
+
+
+.mensaje-sobre small {
+
+    display: block;
+
+    font-size: 12px;
+
+    margin-top: 8px;
+
+    color: #af7777;
+
+}
+
+
+/* =====================================================
+   ANIMACIÓN DEL SOBRE ABIERTO
+===================================================== */
+
+.sobre-contenedor.abierto
+.solapa {
+
+    transform:
+
+        rotateX(180deg);
+
+}
+
+
+.sobre-contenedor.abierto
+.corazon {
+
+    opacity: 0;
+
+    transform:
+
+        translateX(-50%)
+        scale(0.3);
+
+}
+
+
+.sobre-contenedor.abierto
+.mensaje-sobre {
+
+    opacity: 0;
+
+}
+
+
+/* =====================================================
+   CARTA
+===================================================== */
+
+.carta {
+
+    position: fixed;
+
+    top: 50%;
+
+    left: 50%;
+
+    width:
+
+        min(
+            700px,
+            92vw
+        );
+
+    max-height: 85vh;
+
+    overflow-y: auto;
+
+    transform:
+
+        translate(
+            -50%,
+            -50%
+        )
+        scale(0.3);
+
+    opacity: 0;
+
+    pointer-events: none;
+
+    background:
+
+        linear-gradient(
+
+            135deg,
+
+            #f9fbff,
+
+            #e7edf4
+
+        );
+
+    color: #361717;
+
+    padding:
+
+        60px;
+
+    border-radius: 5px;
+
+    box-shadow:
+
+        0 30px 100px
+        rgba(
+            0,
+            0,
+            0,
+            0.9
+        ),
+
+        0 0 40px
+        rgba(220, 130, 130, 0.3);
+
+    z-index: 50;
+
+    transition:
+
+        transform
+        1s
+        cubic-bezier(
+            0.2,
+            0.8,
+            0.2,
+            1
+        ),
+
+        opacity
+        0.8s;
+
+}
+
+
+.carta.mostrar {
+
+    opacity: 1;
+
+    transform:
+
+        translate(
+            -50%,
+            -50%
+        )
+        scale(1);
+
+    pointer-events: auto;
+
+}
+
+
+/* =====================================================
+   BORDE DECORATIVO
+===================================================== */
+
+.carta::before {
+
+    content: "";
+
+    position: absolute;
+
+    inset: 14px;
+
+    border:
+
+        1px solid
+        #c49a9c;
+
+    pointer-events: none;
+
+}
+
+
+/* =====================================================
+   TÍTULO DE LA CARTA
+===================================================== */
+
+.titulo {
+
+    text-align: center;
+
+    color: #631717;
+
+    font-size:
+
+        clamp(
+            25px,
+            5vw,
+            35px
+        );
+
+    margin-bottom: 35px;
+
+    position: relative;
+
+}
+
+
+.titulo::after {
+
+    content: "♥";
+
+    display: block;
+
+    margin-top: 10px;
+
+    color: #a86467;
+
+}
+
+
+/* =====================================================
+   TEXTO DE LA CARTA
+===================================================== */
+
+.texto {
+
+    position: relative;
+
+    font-size: 17px;
+
+    line-height: 1.8;
+
+    text-align: justify;
+
+}
+
+
+.texto p {
+
+    margin-bottom: 20px;
+
+}
+
+
+/* =====================================================
+   FIRMA
+===================================================== */
+
+.firma {
+
+    text-align: right;
+
+    margin-top: 35px;
+
+    color: #63171b;
+
+    font-size: 22px;
+
+    font-style: italic;
+
+}
+
+
+/* =====================================================
+   MENSAJE FINAL
+===================================================== */
+
+.mensaje-final {
+
+    text-align: center;
+
+    margin-top: 40px;
+
+    padding-top: 25px;
+
+    border-top:
+
+        1px solid
+        #c9a9a9;
+
+    color: #7d3131;
+
+    font-size: 18px;
+
+    line-height: 1.7;
+
+}
+
+
+/* =====================================================
+   BOTÓN CERRAR
+===================================================== */
+
+.cerrar {
+
+    display: block;
+
+    margin:
+
+        30px auto 0;
+
+    padding:
+
+        12px 30px;
+
+    border-radius: 25px;
+
+    border:
+
+        1px solid
+        #c08c8c;
+
+    background:
+
+        linear-gradient(
+
+            135deg,
+
+            #631717,
+
+            #210707
+
+        );
+
+    color: white;
+
+    cursor: pointer;
+
+    font-family:
+
+        Georgia,
+        serif;
+
+    transition: 0.3s;
+
+}
+
+
+.cerrar:hover {
+
+    transform:
+        scale(1.05);
+
+}
+
+
+/* =====================================================
+   CORAZONES FLOTANTES
+===================================================== */
+
+.corazon-flotante {
+
+    position: fixed;
+
+    bottom: -50px;
+
+    font-size: 20px;
+
+    color: #e8a8a8;
+
+    animation:
+
+        subir
+        7s
+        linear
+        forwards;
+
+    z-index: 10;
+
+    pointer-events: none;
+
+}
+
+
+@keyframes subir {
+
+    0% {
+
+        transform:
+
+            translateY(0)
+            rotate(0deg);
+
+        opacity: 0;
+
+    }
+
+    10% {
+
+        opacity: 1;
+
+    }
+
+    100% {
+
+        transform:
+
+            translateY(
+                -110vh
+            )
+            rotate(
+                360deg
+            );
+
+        opacity: 0;
+
+    }
+
+}
+
+
+/* =====================================================
+   DISEÑO PARA CELULAR
+===================================================== */
+
+@media(max-width: 600px) {
+
+    .sobre-contenedor {
+
+        height: 240px;
+
+    }
+
+
+    .sobre::before {
+
+        border-left-width:
+            45vw;
+
+        border-right-width:
+            45vw;
+
+        border-bottom-width:
+            125px;
+
+    }
+
+
+    .sobre::after {
+
+        border-left-width:
+            45vw;
+
+        border-top-width:
+            120px;
+
+        border-bottom-width:
+            120px;
+
+    }
+
+
+    .solapa {
+
+        height: 130px;
+
+    }
+
+
+    .corazon {
+
+        top: 75px;
+
+        font-size: 45px;
+
+    }
+
+
+    .mensaje-sobre {
+
+        font-size: 15px;
+
+    }
+
+
+    .carta {
+
+        padding:
+
+            50px 28px;
+
+        max-height: 88vh;
+
+    }
+
+
+    .texto {
+
+        font-size: 15px;
+
+        line-height: 1.7;
+
+    }
+
+
+    .contador {
+
+        top: 20px;
+
+    }
+
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<!-- =====================================================
+     ESTRELLAS DECORATIVAS
+===================================================== -->
+
+<div
+    class="estrella"
+    style="top:10%; left:10%;">
+</div>
+
+<div
+    class="estrella"
+    style="top:20%; left:30%;">
+</div>
+
+<div
+    class="estrella"
+    style="top:15%; right:20%;">
+</div>
+
+<div
+    class="estrella"
+    style="top:40%; right:10%;">
+</div>
+
+<div
+    class="estrella"
+    style="bottom:20%; left:20%;">
+</div>
+
+<div
+    class="estrella"
+    style="bottom:10%; right:30%;">
+</div>
+
+
+
+<!-- =====================================================
+     PANTALLA DE INICIO
+===================================================== -->
+
+<section id="inicio">
+
+    <div class="inicio-contenido">
+
+        <h1>
+            Para ti, mi bb consentido ❤️
+        </h1>
+
+        <h2>
+            La cuenta regresiva sigue...
+        </h2>
+
+        <p>
+
+            Faltan solamente
+
+            <strong>
+                4 días
+            </strong>
+
+            para celebrar los 21 años
+            de la persona que hace
+            muchísimo más bonita mi vida.
+
+            <br><br>
+
+            Preparé algo especial para ti.
+            Pero tendrás que abrirlo
+            para descubrirlo...
+
+        </p>
+
+        <button
+            class="boton"
+            onclick="comenzar()">
+
+            Comenzar ❤️
+
+        </button>
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================================
+     CONTENIDO PRINCIPAL
+===================================================== -->
+
+<main
+    class="contenedor"
+    id="contenido"
+    style="display:none;">
+
+
+    <!-- CONTADOR -->
+
+    <div class="contador">
+
+        <h2>
+            Faltan 4 días para tu cumpleaños ❤️
+        </h2>
+
+        <span>
+            Una pequeña sorpresa para ti...
+        </span>
+
+    </div>
+
+
+
+    <!-- =================================================
+         SOBRE
+    ================================================== -->
+
+    <div
+        class="sobre-contenedor"
+        id="sobreContenedor"
+        onclick="abrirCarta()">
+
+
+        <div class="sobre">
+
+
+            <div class="solapa">
+            </div>
+
+
+            <div class="corazon">
+                ♥
+            </div>
+
+
+            <div class="mensaje-sobre">
+
+                Para mi niño de ojitos bonitos...
+
+                <small>
+                    Toca el sobre para abrirlo
+                </small>
+
+            </div>
+
+
+        </div>
+
+
+    </div>
+
+
+
+    <!-- =================================================
+         CARTA
+    ================================================== -->
+
+    <article
+        class="carta"
+        id="carta">
+
+
+        <h1 class="titulo">
+
+            Qué maravilloso es tenerte en mi vida ❤️
+
+        </h1>
+
+
+
+        <div class="texto">
+
+
+            <p>
+
+                Mi amor,
+
+            </p>
+
+
+
+            <p>
+
+                Hoy quise escribirte algo diferente. No quiero hablar del tiempo, ni de las fechas, ni de los días que faltan para tu cumpleaños. Hoy solo quiero hablar de ti. De la persona tan maravillosa que eres y de todo lo bonito que trajiste a mi vida desde que llegaste.
+            </p>
+
+
+
+            <p>
+
+                Hay veces en las que me pregunto cómo era mi vida antes de ti. Y la verdad es que me cuesta imaginarla, porque ahora estás tan presente en mis pensamientos, en mis días y en mi corazón que siento como si siempre hubieras estado aquí.
+
+            </p>
+
+
+
+            <p>
+
+                No sabes lo bonito que es saber que existes. Saber que en algún lugar del mundo hay una persona que, con solo aparecer, puede cambiar por completo mi estado de ánimo. Que con un mensaje tuyo puede hacerme sonreír en un día difícil. Que con un abrazo puede hacerme sentir que todo está bien, aunque el mundo afuera parezca un desastre.
+
+                Tú llegaste a enseñarme que el amor no siempre necesita grandes demostraciones. A veces está en las cosas más pequeñas: en preguntarme cómo estuvo mi día, en escucharme cuando necesito desahogarme, en reírte conmigo por cualquier tontería, en tomar mi mano, en preocuparte por mí y en hacerme sentir importante sin siquiera darte cuenta.
+            </p>
+
+
+
+            <p>
+
+                Lo que más me gusta de ti no es algo que pueda verse. Es tu forma de ser. Es el corazón tan bonito que tienes. Es la manera en que te esfuerzas por las personas que quieres. Es tu forma de hacerme sentir protegida. Es la tranquilidad que encuentro cuando estoy contigo. Es la confianza que me inspiras y la paz que siento cuando sé que estás a mi lado.
+
+                A veces pienso que no te das cuenta de todo lo bueno que hay en ti. Ojalá pudieras verte por un momento con mis ojos. Verías a un hombre noble, fuerte, inteligente, trabajador y con un corazón enorme. Verías a alguien que merece todas las cosas bonitas que la vida pueda ofrecerle.
+
+            </p>
+
+
+
+            <p>
+
+                Y si pudiera pedir un solo deseo, pediría que nunca dejaras de creer en ti. Porque yo creo en ti incluso en esos momentos en los que tú dudas. Creo en tus sueños, en tu capacidad y en todo lo que eres capaz de lograr.
+
+                Quiero que sepas que me haces feliz de una forma muy sencilla. No necesito que hagas cosas extraordinarias para sentirme afortunada. Me basta con saber que eres tú quien me da los buenos días, quien me pregunta cómo estoy, quien me abraza y quien me dice "te amo". Esas cosas, que quizá parezcan pequeñas, para mí significan el mundo entero.
+            </p>
+
+
+
+            <p>
+
+                Gracias por aparecer en mi vida en el momento en que lo hiciste. Gracias por enseñarme que el amor también puede sentirse como tranquilidad, como confianza y como hogar. Gracias por demostrarme que todavía existen personas que valen la pena.
+
+                No sé qué hice para merecer a alguien como tú, pero todos los días le doy gracias a Dios por haberte puesto en mi camino. Porque desde que llegaste, muchas cosas cambiaron. Mis días tienen más color, mis sonrisas son más sinceras y mis planes para el futuro siempre te incluyen de alguna manera.
+            </p>
+
+
+
+            <p>
+
+                Hoy también celebramos siete meses de ser novios, y mientras escribo estas palabras me doy cuenta de algo: todavía me emociono cuando escucho tu voz, todavía sonrío cuando veo tu nombre en la pantalla de mi celular y todavía siento esos nervios bonitos cuando voy a verte. Y, ¿sabes qué? Espero que nunca desaparezcan. Espero que dentro de muchos años siga sintiendo la misma emoción por ti.
+
+                Amor de mi vida, gracias por existir.
+            </p>
+
+
+
+            <p>
+
+                Gracias por convertirte en una de las personas más importantes de mi vida.
+
+                Gracias por hacerme sentir tan querida.
+
+            </p>
+
+
+
+            <p>
+
+                Gracias por ser tú.
+
+                Y, sobre todo, gracias por haber llegado a mi vida, porque desde entonces entendí que el hogar no siempre es un lugar... a veces también puede ser una persona.
+            </p>
+
+
+
+            <p>
+
+                Te amo con todo mi corazón. Más de lo que estas palabras pueden explicar y mucho más de lo que alguna vez voy a ser capaz de escribir.
+
+            </p>
+
+
+        </div>
+
+
+
+        <!-- FIRMA -->
+
+        <div class="firma">
+
+            Con todo mi amor,
+
+            <br>
+
+            Dari ❤️
+
+        </div>
+
+
+
+        <!-- MENSAJE FINAL -->
+
+        <div class="mensaje-final">
+
+            Esta fue la segunda carta...
+
+            <br>
+
+            <strong>
+                Mañana hay otra carta esperándote. ❤️
+            </strong>
+
+            <br><br>
+
+            Y recuerda...
+
+            <br>
+
+            <strong>
+                Te amo más de lo que cualquier carta
+                podría explicar. 
+            </strong>
+
+        </div>
+
+
+
+        <!-- BOTÓN CERRAR -->
+
+        <button
+            class="cerrar"
+            onclick="cerrarCarta()">
+
+            Cerrar carta
+
+        </button>
+
+
+    </article>
+
+
+</main>
+
+
+
+<script>
+
+
+/* =====================================================
+   COMENZAR EXPERIENCIA
+===================================================== */
+
+function comenzar() {
+
+
+    const inicio =
+        document.getElementById(
+            "inicio"
+        );
+
+
+    const contenido =
+        document.getElementById(
+            "contenido"
+        );
+
+
+    inicio.classList.add(
+        "ocultar"
+    );
+
+
+    setTimeout(function() {
+
+
+        inicio.style.display =
+            "none";
+
+
+        contenido.style.display =
+            "flex";
+
+
+    }, 1000);
+
+
+    crearCorazones();
+
+
+}
+
+
+
+/* =====================================================
+   ABRIR CARTA
+===================================================== */
+
+function abrirCarta() {
+
+
+    const sobre =
+        document.getElementById(
+            "sobreContenedor"
+        );
+
+
+    const carta =
+        document.getElementById(
+            "carta"
+        );
+
+
+    sobre.classList.add(
+        "abierto"
+    );
+
+
+    setTimeout(function() {
+
+
+        carta.classList.add(
+            "mostrar"
+        );
+
+
+        sobre.classList.add(
+            "oculto"
+        );
+
+
+    }, 900);
+
+
+}
+
+
+
+/* =====================================================
+   CERRAR CARTA
+===================================================== */
+
+function cerrarCarta() {
+
+
+    const carta =
+        document.getElementById(
+            "carta"
+        );
+
+
+    const sobre =
+        document.getElementById(
+            "sobreContenedor"
+        );
+
+
+    carta.classList.remove(
+        "mostrar"
+    );
+
+
+    setTimeout(function() {
+
+
+        sobre.classList.remove(
+            "oculto"
+        );
+
+
+        sobre.classList.remove(
+            "abierto"
+        );
+
+
+    }, 700);
+
+
+}
+
+
+
+/* =====================================================
+   CREAR CORAZONES FLOTANTES
+===================================================== */
+
+function crearCorazones() {
+
+
+    setInterval(function() {
+
+
+        const corazon =
+            document.createElement(
+                "div"
+            );
+
+
+        corazon.className =
+            "corazon-flotante";
+
+
+        corazon.innerHTML =
+
+            Math.random() > 0.5
+
+                ? "♥"
+
+                : "♡";
+
+
+        corazon.style.left =
+
+            Math.random() * 100
+            + "%";
+
+
+        corazon.style.fontSize =
+
+            (
+                15
+                +
+                Math.random() * 25
+            )
+            + "px";
+
+
+        corazon.style.animationDuration =
+
+            (
+                5
+                +
+                Math.random() * 5
+            )
+            + "s";
+
+
+        document.body.appendChild(
+            corazon
+        );
+
+
+        setTimeout(function() {
+
+
+            corazon.remove();
+
+
+        }, 10000);
+
+
+    }, 700);
+
+
+}
+
+
+</script>
+
+
+</body>
+
+</html>
